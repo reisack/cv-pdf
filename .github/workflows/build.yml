@@ -17,7 +17,7 @@ jobs:
       - name: Install LaTeX
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra texlive-lang-french lmodern
+          sudo apt-get install -y texlive-latex-recommended texlive-latex-extra texlive-fonts-extra
 
       - name: Replace placeholders with secrets
         run: |
@@ -34,3 +34,4 @@ jobs:
         with:
           name: cv-pdf
           path: cv.pdf
+          retention-days: 1

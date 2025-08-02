@@ -1,6 +1,6 @@
-cv.aux
-cv.log
-cv.out
-cv.pdf
+*.aux
+*.log
+*.out
+*.pdf
 
 secrets.env
