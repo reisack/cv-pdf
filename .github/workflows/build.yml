@@ -1,0 +1,36 @@
+name: Build CV
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra texlive-lang-french lmodern
+
+      - name: Replace placeholders with secrets
+        run: |
+          sed -i "s|__MOBILE__|${{ secrets.CV_MOBILE }}|g" cv.tex
+          sed -i "s|__ADDRESS_1__|${{ secrets.CV_ADDRESS_1 }}|g" cv.tex
+          sed -i "s|__ADDRESS_2__|${{ secrets.CV_ADDRESS_2 }}|g" cv.tex
+          sed -i "s|__EMAIL__|${{ secrets.CV_EMAIL }}|g" cv.tex
+
+      - name: Compile CV
+        run: pdflatex -interaction=nonstopmode -halt-on-error cv.tex
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv-pdf
+          path: cv.pdf

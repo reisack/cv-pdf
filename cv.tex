@@ -1,0 +1,122 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[default]{sourcesanspro}
+\usepackage[T1]{fontenc}
+  
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.88]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+% personal data
+\name{Rémi}{Eisack}
+\title{Développeur .NET / Javascript}                               % optional, remove / comment the line if not wanted
+\address{__ADDRESS_1__}{__ADDRESS_2__}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{__MOBILE__}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{__EMAIL__}                               % optional, remove / comment the line if not wanted
+\homepage{github.com/reisack}                       % optional, remove / comment the line if not wanted
+\extrainfo{Permis B, véhicule}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Compétences informatiques}
+\cvitem{Languages}{C\# (Version 4 à 8), T-SQL, Javascript (ES5), HTML5 / CSS3, C++11}
+\cvitem{Framework .NET}{.NET (4.0, 4.5), MVC (Razor) ,Web Api, WebForm, WPF, NHibernate (API QueryOver)}
+\cvitem{Frameworks Javascript}{AngularJS (Version 1), Ext JS (2.4), JQuery}
+\cvitem{Bases de données}{SQL Server (2008 R2 et 2014)}
+\cvitem{Versionning}{Tortoise SVN, Git (CLI et extension Visual Studio)}
+
+
+\section{Expérience professionnelle}
+\cventry{Depuis 2013}{Développeur .NET}{Acelys}{Montpellier}{}{
+\begin{itemize}%
+\item Développement de diverses applications en WPF (.NET 4.0)
+\item Développement, au forfait, d'une application de gestion d'assurances pour le personnel médical en ASP.NET Web API (back-end) et Angular 1 (front-end). Utilisation de l'ORM NHibernate.
+\item Depuis novembre 2015 : en mission chez SMAG (éditeur de logiciel fournissant des solutions destinées au coopératives agricoles) où j'effectue des développements spécifiques en fonction des besoins des coopératives clientes de la société.
+  \begin{itemize}%
+  \item Développement ASP.NET (4.0) et T-SQL (Procédures stockées)
+  \item Développement de divers rapports avec Reporting Services 2008 R2
+  \item Développement web mobile à l'aide du framework Sencha Touch 2.4
+  \item Utilisation d'Integration Services 2008 R2 (de Mai 2016 à Octobre 2016) dans un cadre ETL pour deux coopératives agricoles, clientes de SMAG, ayant fusionnées.
+  \end{itemize}
+\end{itemize}}
+\cventry{2010--2013}{Développeur .NET}{Aessentia}{Lyon}{}{Développement de divers intranets en ASP.NET / C\# (.NET 4.0).
+\begin{itemize}%
+  \item Utilisation des composants Telerik ASP.NET Ajax
+  \item Création de rapports Reporting Services 2008 R2
+  \item Génération de fichiers Word et Excel 2007 au format Office Open XML
+  \item Participation à la mise en recette des applications et de la création du package d'installation
+\end{itemize}}
+\cventry{2009--2010}{Développeur PHP}{Avanim Production}{Lyon}{}{Développement de sites internet de rencontre et d’e-commerce en PHP.
+\begin{itemize}%
+  \item Utilisation du CMS Joomla 1.5 et 1.0, avec extensions du framework via le développement de modules et de templates selon les besoins
+  \item Utilisation et personnalisation des composants JomSocial et Virtuemart
+  \item Développement JQuery
+\end{itemize}}
+
+\section{Formation / Certifications}
+
+\cventry{Certifications Microsoft}{Examen 70-483 : Programming in C\#}{}{}{}{}
+\cventry{}{Examen 70-480 : Programming in HTML5 with Javascript and CSS3}{}{}{}{}
+
+\cventry{2008--2009}{Licence Professionnelle informatique embarquée et mobile}{Université Lyon 1 Claude Bernard}{Bourg En Bresse}{}{}  % arguments 3 to 6 can be left empty
+\cventry{2006--2008}{BTS Informatique de gestion option Développeur d'applications}{Lycée Lamartinière - Duchère}{Lyon}{}{}
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+\clearpage
+
+
+\end{document}
+
+
+%% end of file `template.tex'.
