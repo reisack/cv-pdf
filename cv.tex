@@ -27,7 +27,7 @@
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 % personal data
 \name{Rémi}{Eisack}
-\title{Lead Developer .NET / TypeScript (Angular / VueJS)}                               % optional, remove / comment the line if not wanted
+\title{Lead Developer .NET / TypeScript (VueJS / Angular)}                               % optional, remove / comment the line if not wanted
 \address{__ADDRESS_1__}{__ADDRESS_2__}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 \phone[mobile]{__MOBILE__}                   % optional, remove / comment the line if not wanted
 %\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
@@ -56,44 +56,46 @@
 \makecvtitle
 
 \section{Compétences informatiques}
-\cvitem{Languages}{C\# (.NET v4.0 à v8), TypeScript (v4 / v5), JavaScript, T-SQL, HTML5 / CSS3}
+\cvitem{Languages}{C\# (.NET v4.7 à v8), TypeScript (v4 / v5), JavaScript, T-SQL, HTML5 / CSS3}
 \cvitem{Framework .NET}{ASP.NET Core (API), Entity Framework, ASP.NET WebForms}
-\cvitem{Frameworks TypeScript}{Vue (v3), PrimeVue, Angular (v9 à v18), Ionic (v5 à v8)}
+\cvitem{Frameworks TypeScript}{Vue (v3), PrimeVue, Angular (v9 à v18), Ionic (v5 à v8), TypeORM}
 \cvitem{Tests unitaires / qualité}{NUnit, NSubstitute, Vitest, Jasmine, SonarQube}
-\cvitem{Outils / plateformes}{Git, Swagger, Microsoft Azure, OpenLens}
+\cvitem{Outils / plateformes}{Git, GitLab, Swagger, Microsoft Azure, OpenLens}
 \cvitem{Intégration / conteneurs}{GitLab CI/CD, Docker (Dockerfile, Docker Compose)}
 \cvitem{Bases de données / BI}{SQL Server (2016 / 2022), Integration Services (SSIS), Reporting Services (SSRS)}
+\cvitem{Intelligence artificielle}{ChatGPT (Génération de code / documentation), Windsurf (auto-complétion)}
 
 \section{Expérience professionnelle}
 \cventry{Depuis 2013}{Développeur .NET}{Acelys}{Montpellier}{}{
 \begin{itemize}%
 \item Développement de diverses applications en WPF (.NET 4.0)
-\item Développement, au forfait, d'une application de gestion d'assurances pour le personnel médical en ASP.NET Web API (back-end) et Angular 1 (front-end). Utilisation de l'ORM NHibernate.
-\item Depuis novembre 2015 : en mission chez SMAG (éditeur de logiciel fournissant des solutions destinées au coopératives agricoles) où j'effectue des développements spécifiques en fonction des besoins des coopératives clientes de la société.
+\item Développement, au forfait, d'une application de gestion d'assurances pour le personnel médical en ASP.NET Web API (back-end) et AngularJs (front-end). Utilisation de l'ORM NHibernate.
+\item Depuis novembre 2015 : en mission chez SMAG, éditeur de logiciel fournissant des solutions destinées au coopératives agricoles.
   \begin{itemize}%
-  \item Développement ASP.NET (4.0) et T-SQL (Procédures stockées)
-  \item Développement de divers rapports avec Reporting Services 2008 R2
-  \item Développement web mobile à l'aide du framework Sencha Touch 2.4
-  \item Utilisation d'Integration Services 2008 R2 (de Mai 2016 à Octobre 2016) dans un cadre ETL pour deux coopératives agricoles, clientes de SMAG, ayant fusionnées.
+  \item Développement ASP.NET 4.0 et T-SQL (Procédures stockées)
+  \item Création et mise à jour de divers rapports avec Reporting Services 2008 R2, correspondant à des besoins spécifiques de différentes coopératives agricoles
+  \item Développement web mobile à l'aide du framework Sencha Touch 2.4, pour une coopérative souhaitant une application permettant d'assurer la transparence et la pérennité de l'approvisionement en caoutchou naturel
+  \item Utilisation d'Integration Services 2008 R2 (de Mai 2016 à Octobre 2016) dans un cadre ETL pour deux coopératives agricoles, clientes de SMAG, ayant fusionnées. L'objectif était de fusionner leur base de données respectives en une seule.
   \end{itemize}
 \end{itemize}}
-\cventry{2010--2013}{Développeur .NET}{Aessentia}{Lyon}{}{Développement de divers intranets en ASP.NET / C\# (.NET 4.0).
+\cventry{2010--2013}{Développeur .NET}{Aessentia}{Lyon}{}{Développements sur l'intranet du groupe la Lyonnaise des eaux (aujourd'hui Suez Eau France).
 \begin{itemize}%
-  \item Utilisation des composants Telerik ASP.NET Ajax
-  \item Création de rapports Reporting Services 2008 R2
-  \item Génération de fichiers Word et Excel 2007 au format Office Open XML
-  \item Participation à la mise en recette des applications et de la création du package d'installation
+  \item Développements en C\# (.NET 4.0), avec l'utilisation des composants UI Telerik ASP.NET Ajax
+  \item Création et mise à jour de rapports avec Reporting Services 2008 R2, concernant des données de qualité de l'eau et de travaux d'assainissement
+  \item Ajout d'une mécanique de génération de fichiers Word et Excel 2007 sur l'intranet, à l'aide d'Open XML SDK, permettant aux collaborateurs de la Lyonnaise des eaux de générer des templates de documents administratifs basés sur les données de l'intranet
+  \item Participation à la mise en recette de l'application et de la création du package d'installation
 \end{itemize}}
-\cventry{2009--2010}{Développeur PHP}{Avanim Production}{Lyon}{}{Développement de sites internet de rencontre et d’e-commerce en PHP.
+\cventry{2009--2010}{Développeur PHP}{Avanim Production}{Lyon}{}{Développement de sites internet de rencontre et d'e-commerce en PHP.
 \begin{itemize}%
-  \item Utilisation du CMS Joomla 1.5 et 1.0, avec extensions du framework via le développement de modules et de templates selon les besoins
-  \item Utilisation et personnalisation des composants JomSocial et Virtuemart
-  \item Développement JQuery
+  \item Développements en PHP 4 / 5
+  \item Création et intégration des modules et templates sur Joomla 1.0 et 1.5, en exploitant et étendant le framework selon les besoins
+  \item Personnalisation des composants JomSocial (sites de rencontre) et Virtuemart (e-commerce)
+  \item Utilisation de jQuery pour ajouter des interactions et animations dynamiques aux sites internet
 \end{itemize}}
 
 \section{Formation / Certifications Microsoft}
 
-\cventry{Certifications (2017)}{Examen 70-483 : Programming in C\#}{}{}{}{}
+\cventry{2017}{Examen 70-483 : Programming in C\#}{}{}{}{}
 \cventry{}{Examen 70-480 : Programming in HTML5 with JavaScript and CSS3}{}{}{}{}
 
 \cventry{2008--2009}{Licence Professionnelle informatique embarquée et mobile}{Université Lyon 1 Claude Bernard}{Bourg En Bresse}{}{}  % arguments 3 to 6 can be left empty
