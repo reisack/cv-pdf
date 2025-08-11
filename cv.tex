@@ -6,7 +6,7 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[12pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv themes
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
@@ -22,12 +22,12 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.88]{geometry}
+\usepackage[scale=0.90]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 % personal data
 \name{Rémi}{Eisack}
-\title{Lead Developer .NET / TypeScript (VueJS / Angular)}                               % optional, remove / comment the line if not wanted
+\title{Lead Developer .NET / VueJS / Angular}                               % optional, remove / comment the line if not wanted
 \address{__ADDRESS_1__}{__ADDRESS_2__}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 \phone[mobile]{__MOBILE__}                   % optional, remove / comment the line if not wanted
 %\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
@@ -57,22 +57,50 @@
 
 \section{Compétences informatiques}
 \cvitem{Languages}{C\# (.NET v4.7 à v8), TypeScript (v4 / v5), JavaScript, T-SQL, HTML5 / CSS3}
-\cvitem{Framework .NET}{ASP.NET Core (API), Entity Framework, ASP.NET WebForms}
-\cvitem{Frameworks TypeScript}{Vue (v3), PrimeVue, Angular (v9 à v18), Ionic (v5 à v8), TypeORM}
-\cvitem{Tests unitaires / qualité}{NUnit, NSubstitute, Vitest, Jasmine, SonarQube}
-\cvitem{Outils / plateformes}{Git, GitLab, Swagger, Microsoft Azure, OpenLens}
-\cvitem{Intégration / conteneurs}{GitLab CI/CD, Docker (Dockerfile, Docker Compose)}
-\cvitem{Bases de données / BI}{SQL Server (2016 / 2022), Integration Services (SSIS), Reporting Services (SSRS)}
-\cvitem{Intelligence artificielle}{ChatGPT (Génération de code / documentation), Windsurf (auto-complétion)}
+\cvitem{.NET}{ASP.NET Core (API), Entity Framework, ASP.NET WebForms}
+\cvitem{TypeScript}{Vue (v3), PrimeVue, Angular (v9 à v17), Ionic (v5 à v8, Capacitor), TypeORM}
+\cvitem{Tests unitaires}{NUnit, NSubstitute, Vitest, Jasmine}
+\cvitem{Outils / plateformes}{Git, GitLab, Swagger, SonarQube, Microsoft Azure, OpenLens}
+\cvitem{Intégration}{GitLab CI/CD, Docker (Dockerfile, Docker Compose)}
+\cvitem{Données / BI}{SQL Server (2016 / 2022), Integration Services (SSIS), Reporting Services (SSRS)}
+\cvitem{IA}{ChatGPT (Génération de code / documentation), Windsurf (auto-complétion)}
 
 \section{Expérience professionnelle}
-\cventry{Depuis 2013}{Développeur .NET}{Acelys}{Montpellier}{}{
+\cventry{Depuis 2022}{Lead Developer}{SMAG}{Montpellier}{}{Responsable technique de l'équipe, sur la partie végétale du logiciel de gestion agricole AGREO
+\begin{itemize}%
+\item Développements d'applications frontend en VueJs 3 et d'APIs Back for front en .NET 8, destinées à remplacer certains écrans dans Agreo pour moderniser l'ERP en WebForms
+  \begin{itemize}%
+  \item Mise à jour en masse de propriétés customs définissables par les utilisateurs, destinées à enrichir des données référentielles concernant les variétés végétales
+  \item Gestion de distributions de lots de semences pour le compte d'un client, mais qui a été développée pour être standard. Les données sont synchronisées avec les données de l'ERP du client (SAP, dans le cas du client à l'origine de la demande)
+  \item Envoi en masse de contrats parcellaires en documents PDF aux agriculteurs, les PDFs sont générés à partir de rapports Reporting Services 2016
+  \item Utilisation d'entity framework dans toutes les APIs BFF pour l'intéraction avec des bases de données SQL Server 2022
+  \end{itemize}
+\item Maintenance applicative sur l'ERP Agreo en ASP.NET 4.7 WebForms et T-SQL
+\item Animation de réunions hebdomadaires d'amélioration technique
+\item Garant de l'écriture de tests unitaires dans l'équipe, mise en place de SonarQube sur les projets d'équipe avec un minimum de 80\% de couverture sur le nouveau code (inférieur à 90 jours)
+\item Communication régulière avec l'équipe DevOps avec notamment un point hebdomadaire, référent DevOps de l'équipe
+\item Développements des aspects CI des projets en charge dans l'équipe (Gitlab CI), pour automatiser l'exécution des tests unitaires et la création du livrable
+\item Rédaction de la documentation technique des projets en markdown / mermaid, dans les wikis des repositories GitLab
+\item Fonctionnement d'équipe en mode agile selon la méthodologie SCRUM et utilisation de JIRA pour la gestion de sprint
+\end{itemize}}
+\cventry{2018--2022}{Ingénieur développement}{SMAG}{Montpellier}{}{Développements concernant la partie végétale du logiciel de gestion agricole AGREO
+\begin{itemize}%
+\item Développement ASP.NET 4.7 WebForms et T-SQL
+\item Maintenance applicative et ajout de fonctionnalités sur une application mobile basée sur le framework Ionic et utilisant Angular et Cordova, à destination des techniciens agricoles pour la gestion de parcelles agricoles
+\item Mise en place de tests unitaires pour améliorer la qualité du code et réduire les anomalies
+  \begin{itemize}%
+  \item Utilisation du framework jasmine pour l'application mobile en Ionic / Angular
+  \item Expérimentation sur l'ERP Agreo en .NET avec MSTest et la librairie Microsoft Fakes pour pouvoir mocker du code legacy, n'ayant pas l'architecture nécessaire pour écrire des tests unitaires de façon standard
+  \end{itemize}
+\item Promotion au poste de Lead Developer suite aux résultats obtenus sur la qualité logicielle et l'adoption des bonnes pratiques par l'équipe
+\end{itemize}}
+\cventry{2013--2018}{Développeur .NET}{Acelys}{Montpellier}{}{
 \begin{itemize}%
 \item Développement de diverses applications en WPF (.NET 4.0)
 \item Développement, au forfait, d'une application de gestion d'assurances pour le personnel médical en ASP.NET Web API (back-end) et AngularJs (front-end). Utilisation de l'ORM NHibernate.
 \item Depuis novembre 2015 : en mission chez SMAG, éditeur de logiciel fournissant des solutions destinées au coopératives agricoles.
   \begin{itemize}%
-  \item Développement ASP.NET 4.0 et T-SQL (Procédures stockées)
+  \item Développement ASP.NET 4.0 WebForms et T-SQL (Procédures stockées)
   \item Création et mise à jour de divers rapports avec Reporting Services 2008 R2, correspondant à des besoins spécifiques de différentes coopératives agricoles
   \item Développement d'une application web mobile à l'aide du framework Sencha Touch 2.4, pour un grand groupe souhaitant assurer la transparence et la pérennité de son approvisionement en caoutchou naturel
   \item Utilisation d'Integration Services 2008 R2 (de Mai 2016 à Octobre 2016) dans un cadre ETL pour deux coopératives agricoles, clientes de SMAG, ayant fusionnées. L'objectif était de fusionner leur base de données respectives en une seule.
@@ -80,7 +108,7 @@
 \end{itemize}}
 \cventry{2010--2013}{Développeur .NET}{Aessentia}{Lyon}{}{Développements sur l'intranet du groupe la Lyonnaise des eaux (aujourd'hui Suez Eau France).
 \begin{itemize}%
-  \item Développements en C\# (.NET 4.0), avec l'utilisation des composants UI Telerik ASP.NET Ajax
+  \item Développements en C\# (.NET 4.0, WebForms), avec l'utilisation des composants UI Telerik ASP.NET Ajax
   \item Création et mise à jour de rapports avec Reporting Services 2008 R2, concernant des données de qualité de l'eau et de travaux d'assainissement
   \item Ajout d'une mécanique de génération de fichiers Word et Excel 2007 sur l'intranet, à l'aide d'Open XML SDK, permettant aux collaborateurs de la Lyonnaise des eaux de générer des templates de documents administratifs basés sur les données de l'intranet
   \item Participation à la mise en recette de l'application et de la création du package d'installation
