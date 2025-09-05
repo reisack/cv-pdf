@@ -238,6 +238,7 @@
 \newcommand*{\homepage}[1]{\def\@homepage{#1}}
 % defines additional personal information (optional)
 % usage: \extrainfo{<text>}
+\newcommand*{\linkedin}[1]{\def\@linkedin{#1}}
 \newcommand*{\extrainfo}[1]{\def\@extrainfo{#1}}
 
 % colors
@@ -390,12 +391,12 @@
     {\href{#2}{#2}}%
     {\href{#2}{#1}}}
 
-% makes a http hyperlink
-% usage: \httplink[optional text]{link}
-\newcommand*{\httplink}[2][]{%
+% makes a https hyperlink
+% usage: \httpslink[optional text]{link}
+\newcommand*{\httpslink}[2][]{%
   \ifthenelse{\equal{#1}{}}%
-    {\href{http://#2}{#2}}%
-    {\href{http://#2}{#1}}}
+    {\href{https://#2}{#2}}%
+    {\href{https://#2}{#1}}}
 
 % makes an email hyperlink
 % usage: \emaillink[optional text]{link}
