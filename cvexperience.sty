@@ -1,0 +1,13 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cvexperience}[2026/09/27 CV experience formatting]
+
+\RequirePackage{needspace}
+
+% Experience entries use the full page width. Their content can break across
+% pages to avoid large blank spaces at page boundaries.
+\newcommand*{\experience}[5]{%
+  \par\Needspace{4\baselineskip}\addvspace{.4em}%
+  \noindent\textbf{#1}, {\color{color2}#2}, #3. {\color{color2}#4}\par\nobreak
+  \noindent#5\par}
+
+\endinput
