@@ -15,6 +15,7 @@
 \nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
 \usepackage[none]{hyphenat}
+\usepackage{needspace}
 
 % character encoding
 \usepackage[default]{sourcesanspro}
@@ -24,7 +25,7 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.90]{geometry}
+\usepackage[hscale=0.91,vscale=0.92]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 % personal data
@@ -50,12 +51,19 @@
 % bibliography with mutiple entries
 %\usepackage{multibib}
 %\newcites{book,misc}{{Books},{Others}}
+% Les expériences utilisent toute la largeur de la page. Leur contenu reste
+% sécable pour éviter les grands blancs lors des changements de page.
+\newcommand*{\experience}[5]{%
+  \par\Needspace{4\baselineskip}\addvspace{.4em}%
+  \noindent\textbf{#1}, {\color{color2}#2}, #3. {\color{color2}#4}\par\nobreak
+  \noindent#5\par}
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
+\vspace*{-.75em}
 \makecvtitle
 
 \section{Compétences informatiques}
@@ -69,11 +77,11 @@
 \cvitem{Assistants IA}{Claude Code, Codex}
 
 \section{Expériences professionnelles}
-\cventry{Décembre~2022 Aujourd'hui}{Lead Developer}{SMAG}{Montpellier}{}{Responsable technique d'une équipe de 4 développeurs, en charge de la partie végétale de l'ERP destiné à des coopératives agricoles.
+\experience{Lead Developer}{SMAG}{Montpellier}{Décembre 2022 -- Aujourd'hui}{Lead technique d'une équipe de 3 développeurs sur l'ERP végétal destiné aux coopératives agricoles.
 \begin{itemize}%
 \item Développements et modernisation
   \begin{itemize}%
-  \item Mise en place de harnais agentiques : AGENTS.md, intégration de skills et agents spécialisés, MCPs Jira/SonarQube et boucles de feedback automatisées (tests, lint, build, documentation)
+  \item Mise en place de harnais agentiques : AGENTS.md, intégration de skills et agents spécialisés, serveurs MCP pour Jira et SonarQube, et boucles de feedback automatisées (tests, lint, build, documentation)
   \item Micro-frontends Vue.js 3 / TypeScript et API .NET 8 (Backend For Frontend) pour remplacer progressivement des écrans ASP.NET WebForms et ASP Classic de l'ERP
   \item Interaction avec SQL Server 2016 et 2022 via EF Core
   \item Mises à jour régulières des versions des frameworks et des packages
@@ -89,18 +97,20 @@
 \item Leadership technique
   \begin{itemize}%
   \item Animation de réunions hebdomadaires d'amélioration technique au sein de l'équipe
-  \item Rédaction de la documentation technique des projets (Markdown, Mermaid) dans les wikis des repositories GitLab
+  \item Documentation technique des projets dans les wikis GitLab (Markdown, Mermaid)
   \item Revues de code systématiques et pair programming en fonction des besoins
   \end{itemize}
 \item Collaboration transverse
   \begin{itemize}%
-  \item Communication régulière avec l'équipe DevOps, notamment via un point hebdomadaire, en tant que référent DevOps de l'équipe
-  \item Participation à un point hebdomadaire dédié au partage et à l'amélioration de l'utilisation des technologies backend dans l'entreprise
+  \item Référent DevOps de l'équipe, avec un point de coordination hebdomadaire
+  \item Point hebdomadaire de partage et d'amélioration des pratiques backend dans l'entreprise
   \end{itemize}
 \item Fonctionnement d'équipe en mode agile selon la méthodologie Scrum, avec l'utilisation de Jira pour la gestion des sprints de 2 semaines
-\item Participation ponctuelle au processus de recrutement via la conduite d'entretiens techniques (environ 10 candidats pour 4 recrutements finalisés avec succès)
+\item Entretiens techniques de recrutement : environ 10 candidats, 4 recrutements finalisés
 \end{itemize}}
-\cventry{Mars~2018 Décembre~2022}{Ingénieur Développement}{SMAG}{Montpellier}{}{Développements concernant la partie végétale de l'ERP destiné à des coopératives agricoles.
+\newpage
+\vspace*{.3em}
+\experience{Ingénieur Développement}{SMAG}{Montpellier}{Mars 2018 -- Décembre 2022}{Développements concernant la partie végétale de l'ERP destiné à des coopératives agricoles.
 \begin{itemize}%
 \item Développements en ASP.NET WebForms 4.7 et T-SQL
 \item Maintenance et ajout de fonctionnalités sur une application mobile basée sur Ionic \newline (Angular / TypeScript, Capacitor), concernant la gestion de parcelles agricoles
@@ -112,7 +122,7 @@
 \item Expérience en télétravail à 100 \% pendant un an (crise sanitaire), puis 3 jours par semaine
 \item Promotion au poste de Lead Developer grâce aux résultats obtenus en matière de qualité logicielle et à l'adoption des bonnes pratiques dans l'équipe
 \end{itemize}}
-\cventry{Novembre~2013 Février~2018}{Développeur .NET}{Acelys}{Montpellier}{}{
+\experience{Développeur .NET}{Acelys}{Montpellier}{Novembre 2013 -- Février 2018}{
 \begin{itemize}%
 \item Développement de diverses applications en WPF (.NET 4.0)
 \item Développement d'une application de gestion de contrats d'assurance pour le personnel médical, en ASP.NET Web API (backend) et AngularJS (frontend). Utilisation de l'ORM NHibernate.
@@ -124,14 +134,14 @@
   \item Réalisation d’un projet ETL de fusion de bases de données pour deux coopératives agricoles, consolidées dans une base unique (SSIS 2008 R2)
   \end{itemize}
 \end{itemize}}
-\cventry{Octobre~2010 Février~2013}{Développeur .NET}{Aessentia}{Lyon}{}{Développements sur l'intranet du groupe La Lyonnaise des Eaux (aujourd'hui Suez Eau France).
+\experience{Développeur .NET}{Aessentia}{Lyon}{Octobre 2010 -- Février 2013}{Développements sur l'intranet du groupe La Lyonnaise des Eaux (aujourd'hui Suez Eau France).
 \begin{itemize}%
   \item Développements en C\# (.NET 4.0, WebForms) avec les composants UI Telerik ASP.NET Ajax
   \item Création et mise à jour de rapports avec Reporting Services 2008 R2, sur les données de qualité de l'eau et les travaux d'assainissement
   \item Mise en place d'un mécanisme de génération de fichiers Word et Excel 2007 sur l'intranet via Open XML SDK, permettant aux collaborateurs de La Lyonnaise des Eaux de générer des modèles de documents administratifs basés sur les données de l'intranet
   \item Participation aux déploiements de l'application et à la création des packages d'installation
 \end{itemize}}
-\cventry{Octobre~2009 Août~2010}{Développeur PHP}{Avanim Production}{Lyon}{}{Développement de sites web de rencontre et d'e-commerce en PHP.
+\experience{Développeur PHP}{Avanim Production}{Lyon}{Octobre 2009 -- Août 2010}{Développement de sites web de rencontre et d'e-commerce en PHP.
 \begin{itemize}%
   \item Développements en PHP 4 et 5
   \item Création et intégration de modules et de templates sur Joomla 1.0 et 1.5, en personnalisant le framework selon les besoins
